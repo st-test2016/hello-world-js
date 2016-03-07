@@ -1,0 +1,10 @@
+.module {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+
+.module-extended {
+	@extend .module;
+	background-color: blue;
+}
