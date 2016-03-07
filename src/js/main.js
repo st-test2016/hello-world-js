@@ -1,11 +1,19 @@
 'use strict';
 
+var Module = require('./module/Module');
+
 var Main = (function() {
 
 	return {
 
 		initialize : function() {
-			console.log("hello world!");
+			var module = new Module({
+				str : 'Hello world!'
+			});
+
+			module.render();
+
+			document.querySelector('main').appendChild( module.el );
 		}
 
 	}

@@ -10,6 +10,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign');
 var livereload = require('gulp-livereload');
 
+var browserifyHandlebars = require('browserify-handlebars');
+
 module.exports = (function() {
 
     var watchifyInstance,
@@ -29,6 +31,7 @@ module.exports = (function() {
             watchifyInstance = watchify( browserify( watchifyInputOpts ) ); 
 
             // add transformations here
+            watchifyInstance.transform(browserifyHandlebars);
             // i.e. b.transform(coffeeify);
 
             // Define tasks for a basic browserify

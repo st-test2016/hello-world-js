@@ -3,9 +3,16 @@ html, body, ul, ol {
   padding: 0; }
 
 .module, .module-extended {
+  position: relative;
   width: 100px;
   height: 100px;
   background-color: orange; }
+  .module .text, .module-extended .text {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
 
 .module-extended {
   background-color: blue; }
